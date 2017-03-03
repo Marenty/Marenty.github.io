@@ -1,18 +1,20 @@
-
-<!doctype html>
-<html lang=pl>
-<head>
-  <meta charset=utf-8>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>My Web Page</title>
-  <meta name="description" content="">
-  <link rel="stylesheet" href="assets/stylesheets/style.css">
-</head>
-<body>
-  <h3>Polskie znaki diakrytyczne</h3>
-
-  <p>
-    <google-map fit-to-marker api-key="AIzaSyD3E1D9b-Z7ekrT3tbhl_dy8DCXuIuDDRc">
-    <google-map-marker latitude="37.78" longitude="-122.4" draggable="true"></google-map-marker>�����󜟿 ��ʣ�ӌ��</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../bower_components/google-map/google-map.html">
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map">
+      <google-map latitude="37.77493" longitude="-122.41942"></google-map>
+</div>
+  </body>
 </html>
