@@ -1,0 +1,118 @@
+<!Doctype html>
+<html lang="pl">
+<head>
+  <title>Zad 3 - responsywne tabele i obrazki</title>
+  <link rel="stylesheet" href="./scss/stylzad3.css" />
+  <meta name="viewport" content="initial-scale=1.0,width=device-width">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./scss/tablesaw.css">
+  <script src="./javascript/tablesaw.js"></script>
+  <script src="./javascript/ablesaw-init.js"></script>
+  <script src=../node_modules/jquery/dist/jquery.js></script>
+  <script>
+  //  alert($.fn.jquery);
+  $.getJSON( "./assets/ABorzyszkowski.json", wypelnij);
+  function wypelnij(data){
+    console.log( "success" );
+    var dodaj = '';
+    $.each(data, function (i, obj){
+      dodaj += '<tr><td><b class="tablesaw-cell-label">Dzień</b><span class="tablesaw-cell-content">' + obj.dzien + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Godzina</b><span class="tablesaw-cell-content">' + obj.godz + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Przedmiot</b><span class="tablesaw-cell-content">' + obj.przedmiot + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Grupa</b><span class="tablesaw-cell-content">' + obj.grupa + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Sala</b><span class="tablesaw-cell-content">' + obj.sala + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Typ</b><span class="tablesaw-cell-content">' + obj.typ + '</span></td>'
+      dodaj += '<td><b class="tablesaw-cell-label">Uwagi</b><span class="tablesaw-cell-content">' + obj.uwagi + '</span></td></tr>'
+      console.log( "success" );
+    });
+    $('#tabela').html(dodaj);
+  }
+  </script>
+</head>
+<body>
+
+<div class="tabela">
+  <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+    <caption>Plan zajęć - Andrzej Borzyszkowski semestr letni 2017</caption>
+    <colgroup>
+      <col span="1" style="background-color:#cce6ff">
+      <col span="6" style="background-color:#e6f3ff">
+    </colgroup>
+    <thead style="background-color:#b3daff ">
+      <tr>
+        <th >
+          dzień tygodnia
+        </th>
+        <th >
+          godzina
+        </th>
+        <th >
+          przedmiot
+        </th>
+        <th >
+          grupa
+        </th>
+        <th >
+          sala
+        </th>
+        <th >
+          rodzaj zajęć
+        </th>
+        <th >
+          uwagi
+        </th>
+      </tr>
+    </thead>
+    <tbody id='tabela'>
+    </tbody>
+    <tfoot>
+      <tr class="stopka-row">
+        <td colspan="7" style="height: 34px">
+          <div class = "Stopka">
+          Dane do tabeli pochodzą ze strony <a href="https://inf.ug.edu.pl/plan/">https://inf.ug.edu.pl/plan/</a></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+
+
+<div class="Obrazek">
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 640px)" srcset="./assets/obrazkizad3/lody1-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody1-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody1-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 640px)" srcset="./assets/obrazkizad3/lody2-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody2-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody2-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 640px)" srcset="./assets/obrazkizad3/lody3-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody3-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody3-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 640px)" srcset="./assets/obrazkizad3/lody4-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody4-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody4-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+</div>
+
+
+</body>
+</html>

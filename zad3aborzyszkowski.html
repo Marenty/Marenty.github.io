@@ -1,0 +1,105 @@
+<!Doctype html>
+<html lang="pl">
+<head>
+  <title>Zad 3 - responsywne tabele i obrazki</title>
+  <link rel="stylesheet" href="./scss/stylzad3.css" />
+  <meta name="viewport" content="initial-scale=1.0,width=device-width">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./scss/tablesaw.css">
+  <script src="./javascript/tablesaw.js"></script>
+  <script src="./javascript/ablesaw-init.js"></script>
+  <script src=../node_modules/jquery/dist/jquery.js></script>
+  <script>
+  //  alert($.fn.jquery);
+  $.getJSON( "./assets/ABorzyszkowski.json", wypelnij);
+  function wypelnij(data){
+    console.log( "success" );
+    var dodaj = '';
+    $.each(data, function (i, obj){
+      dodaj += '<tr><td>' + obj.dzien + '</td>'
+      dodaj += '<td>' + obj.godz + '</td>'
+      dodaj += '<td>' + obj.przedmiot + '</td>'
+      dodaj += '<td>' + obj.grupa + '</td>'
+      dodaj += '<td>' + obj.sala + '</td>'
+      dodaj += '<td>' + obj.typ + '</td>'
+      dodaj += '<td>' + obj.uwagi + '</td></tr>'
+      console.log( "success" );
+    });
+    $('#tabela').html(dodaj);
+  }
+  </script>
+</head>
+<body>
+
+<div>
+  <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+    <thead>
+      <tr>
+        <th align=center>
+          dzień tygodnia
+        </th>
+        <th align=center>
+          godzina
+        </th>
+        <th align=center>
+          przedmiot
+        </th>
+        <th align=center>
+          grupa
+        </th>
+        <th align=center>
+          sala
+        </th>
+        <th align=center>
+          rodzaj zajęć
+        </th>
+        <th align=center>
+          uwagi
+        </th>
+      </tr>
+    </thead>
+    <tbody id='tabela'>
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="Obrazek">
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 630px)" srcset="./assets/obrazkizad3/lody1-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody1-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody1-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 630px)" srcset="./assets/obrazkizad3/lody2-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody2-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody2-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 630px)" srcset="./assets/obrazkizad3/lody3-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody3-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody3-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+  <figure class = "Obrazek2">
+    <picture>
+      <source media="(min-width: 630px)" srcset="./assets/obrazkizad3/lody4-big.jpg" >
+      <source media="(min-width: 500px)" srcset="./assets/obrazkizad3/lody4-medium.jpg" >
+      <img src="./assets/obrazkizad3/lody4-small.jpg" alt="Tu powinien być obrazek 1">
+    </picture>
+  </figure>
+
+</div>
+
+
+</body>
+</html>
