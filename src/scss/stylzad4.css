@@ -1,0 +1,75 @@
+body{
+  margin: 0;
+}
+div{
+  width: 100%;
+  height: 175px;
+}
+
+footer{
+  margin-top: 50px;
+  text-align: center;
+}
+
+p{
+  margin-right: 5em;
+  margin-left: 5em;
+  font-size: 17px;
+}
+
+.naglowek{
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.blue{
+  background-color: #99FFFF;
+}
+
+.green{
+  background-color: #99FF33;
+}
+
+.red{
+  background-color: #FF6666;
+}
+
+.cream{
+  background-color: #FFFF99;
+}
+
+.najwiekszy{
+  margin-top: 0;
+}
+
+@media(max-width:800px){
+  p{
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  .container{
+    width:auto;
+    display:grid;
+    grid-template-columns: 100%;
+  }
+}
+
+@media(min-width:800px){
+  .container{
+    width:auto;
+    display:grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media(min-width:1200px){
+.container{
+  width:auto;
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+}

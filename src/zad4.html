@@ -1,0 +1,73 @@
+<!Doctype html>
+<html lang="pl">
+<head>
+  <title>Zad 4 - wzory matematyczne</title>
+  <meta name="viewport" content="initial-scale=1.0,width=device-width">
+  <script src='../node_modules/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <link rel="stylesheet" href="./scss/stylzad4.css" />
+</head>
+  <body>
+    <div>
+      <p class='naglowek'>Proste wzory statystyczne</p>
+    </div>
+    <div class='container'>
+      <div class='green'>
+        <p>Średnia arytmetyczna w szeregu szczegółowym</p>
+        <p> \(\overline{x}=\frac{1}{n}\displaystyle\sum_{i=1}^{n} x_i\)</p>
+      </div>
+      <div class='blue'>
+        <p>Średnia arytmetyczna w szeregu rozdzielczym punktowym</p>
+        <p> \(\overline{x}=\frac{1}{n}\displaystyle\sum_{i=1}^{k} x_i n_i\)</p>
+      </div>
+      <div class='red'>
+        <p>Mediana</p>
+        <p> \(Me=\left\{ \begin{array}{ll}
+          \frac{x_n+1}{n} & \textrm{gdy n nieparzyste}\\
+          \frac{1}{2}(x_\frac{n}{2} + x_{\frac{n}{2}+1}) & \textrm{gdy n parzyste}\\
+          \end{array} \right.\)</p>
+      </div>
+      <div class='blue'>
+        <p>Odchylenie przeciętne w szeregu szczegółowym</p>
+        <p> \(d=\frac{1}{2}\displaystyle\sum_{i=1}^{n}|x_i - \overline{x}|\)</p>
+      </div>
+      <div class='red'>
+        <p>Odchylenie przeciętne w szeregu rozdzielczym punktowym</p>
+        <p> \(d=\frac{1}{2}\displaystyle\sum_{i=1}^{k}|x_i - \overline{x}|\cdot n_i\)</p>
+      </div>
+      <div class='green'>
+        <p>Wariancja w szeregu szczegółowym</p>
+        <p> \(s^2 = \frac{1}{2}\displaystyle\sum_{i=1}^{n}(x_i - \overline{x})^2\)</p>
+      </div>
+      <div class='cream'>
+        <p>Wariancja w szeregu rozdzielczym punktowym</p>
+        <p> \(s^2 = \frac{1}{2}\displaystyle\sum_{i=1}^{k}(x_i - \overline{x})\cdot n_i^2\)</p>
+      </div>
+      <div class='green'>
+        <p>Odchylenie standardowe</p>
+        <p> \( s = \sqrt{s^2}\)</p>
+      </div>
+      <div class='cream'>
+        <p>Współczynnik zmienności</p>
+        <p> \( V = \frac{s}{x} \cdot 100\%\)</p>
+      </div>
+      <div div class='red'>
+        <p>Współczynnik zmienności</p>
+        <p> \( V = \frac{d}{x} \cdot 100\%\)</p>
+      </div>
+      <div class='cream'>
+        <p>Kowariancja</p>
+        <p> \(cov(x,y) = \frac{1}{2}\displaystyle\sum_{i=1}^{n}(x_i - \overline{x})(y_i - \overline{y})\)</p>
+      </div>
+      <div class='blue'>
+        <p style='margin-bottom:0'>Współczynnik korelacji liniowej Pearsona</p>
+        <p class='najwiekszy'> \(r = \frac{cov(x,y)}{s_x \cdot s_y} =
+          \frac{\frac{1}{2}\displaystyle\sum_{i=1}^{n}(x_i - \overline{x})(y_i - \overline{y})}
+          {\sqrt{\frac{1}{2}\displaystyle\sum_{i=1}^{k}(x_i - \overline{x})^2\sum_{i=1}^{k}(y_i - \overline{y})^2}}\)</p>
+      </div>
+  </body>
+  <footer>
+      <p>
+        <a href='https://github.com/marenty/marenty.github.io/blob/master/src/zad4.html'>Link do strony z kodem źródłowym</a>
+      </p>
+  </footer>
+</html>
